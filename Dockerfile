@@ -18,7 +18,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # copy source and model
 COPY src/ src/
-//COPY models/ models/
+# COPY models/ models/
 
 EXPOSE 8000
 
