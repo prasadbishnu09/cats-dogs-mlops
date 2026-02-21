@@ -1,0 +1,16 @@
+stages:
+  preprocess:
+    cmd: python src/data/preprocess.py
+    deps:
+      - src/data/preprocess.py
+      - data/raw/dogs-vs-cats
+    outs:
+      - data/processed/224x224
+  train:
+    cmd: python src/model/train.py
+    deps:
+      - src/model/train.py
+      - data/processed/224x224/train
+      - data/processed/224x224/val
+    outs:
+      - models/model.pt
