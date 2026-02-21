@@ -1,58 +1,29 @@
-# Ignore raw data
-/data/raw/
+# Ignore only data, models, and experiment outputs at project root
+/data/
+models/
+mlruns/
 
-# Ignore processed data (optional, if not tracked by DVC)
-# /data/processed/
+# Ignore DVC cache
+.dvc/cache/
 
-# Ignore model artifacts (optional, if not tracked by DVC)
-# /models/
-
-# DVC will track files as needed, so don't ignore .dvc files
-!.dvc/
-
-# Ignore Python cache and logs
+# Python cache/virtualenv
 __pycache__/
 *.pyc
 *.pyo
+.venv/
 *.log
 
-# Ignore Jupyter notebooks checkpoints
+# Notebook checkpoints
 .ipynb_checkpoints/
 
-# Ignore Docker and environment files
+# VSCode
+.vscode/
 .env
 *.env
 
-# Ignore OS files
+# OS files
 .DS_Store
 Thumbs.db
 
-# Ignore VS Code settings
-.vscode/
-
-# DVC outputs
-data/processed/
-models/model.pt
-
-# MLflow
-mlruns/
-
-# Python
-.venv/
-__pycache__/
-
-# Python
-__pycache__/
-*.pyc
-.venv/
-
-# Data
-data/
-mlruns/
-
-# DVC cache
-.dvc/cache/
-
 # Artifacts
 *.png
-models/
