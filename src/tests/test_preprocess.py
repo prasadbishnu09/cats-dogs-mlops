@@ -4,7 +4,7 @@ import tempfile
 from pathlib import Path
 from PIL import Image
 import shutil
-from src.data.preprocess import resize_and_save
+from data.preprocess import resize_and_save
 
 
 def test_resize_and_save_creates_image():

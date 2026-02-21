@@ -2,8 +2,8 @@
 import tempfile
 from PIL import Image
 import torch
-from src.serve.utils import ModelWrapper
-from src.model.net import SimpleCNN
+from serve.utils import ModelWrapper
+from model.net import SimpleCNN
 from pathlib import Path
 
 def test_model_predict_on_dummy_image(tmp_path):

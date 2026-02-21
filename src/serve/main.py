@@ -4,7 +4,7 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import JSONResponse
 from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
 import logging
-from src.serve.utils import ModelWrapper
+from serve.utils import ModelWrapper
 from fastapi import Response
 from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
 

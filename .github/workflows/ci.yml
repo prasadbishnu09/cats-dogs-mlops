@@ -31,8 +31,7 @@ jobs:
 
       - name: Run Pytest
         run: |
-          echo "Workspace is $GITHUB_WORKSPACE"
-          export PYTHONPATH=$GITHUB_WORKSPACE
+          export PYTHONPATH=$GITHUB_WORKSPACE/src
           pytest -q
 
       - name: Log in to GHCR
