@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+src/cats_dogs_mlops.egg-info/PKG-INFO
+src/cats_dogs_mlops.egg-info/SOURCES.txt
+src/cats_dogs_mlops.egg-info/dependency_links.txt
+src/cats_dogs_mlops.egg-info/top_level.txt
+src/data/__init__.py
+src/data/dataset.py
+src/data/preprocess.py
+src/model/__init__.py
+src/model/net.py
+src/model/train.py
+src/serve/__init__.py
+src/serve/main.py
+src/serve/utils.py
+src/tests/test_inference.py
+src/tests/test_preprocess.py

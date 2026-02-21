@@ -11,7 +11,7 @@ import numpy as np
 import mlflow
 import mlflow.pytorch
 from pathlib import Path
-from data.dataset import CatsDogsDataset
+from src.data.dataset import CatsDogsDataset
 from model.net import SimpleCNN
 import itertools
 import random
