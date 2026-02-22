@@ -1,6 +1,5 @@
 # Ignore only data, models, and experiment outputs at project root
 /data/
-models/
 mlruns/
 
 # Ignore DVC cache
