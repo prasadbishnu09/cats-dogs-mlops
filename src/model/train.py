@@ -168,7 +168,7 @@ def train(args):
 
                 model_path = Path(args.model_out)
                 model_path.parent.mkdir(parents=True, exist_ok=True)
-                torch.save(model.state_dict(), model_path)
+                torch.save(model.state_dict(), model_path) # save best model
                 mlflow.log_artifact(str(model_path), artifact_path="model")
             else:
                 no_improve += 1
