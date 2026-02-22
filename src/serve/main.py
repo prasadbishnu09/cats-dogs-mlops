@@ -7,6 +7,10 @@ import logging
 from src.serve.utils import ModelWrapper
 from fastapi import Response
 from prometheus_client import generate_latest, CONTENT_TYPE_LATEST
+import time
+import logging
+from fastapi import Request
+
 
 import os
 from pathlib import Path
@@ -43,3 +47,20 @@ def metrics():
         content=generate_latest(),
         media_type=CONTENT_TYPE_LATEST
     )
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("inference")
+
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    start_time = time.time()
+
+    response = await call_next(request)
+
+    process_time = time.time() - start_time
+    logger.info(
+        f"{request.method} {request.url.path} "
+        f"Status: {response.status_code} "
+        f"Latency: {process_time:.4f}s"
+    )
+
+    return response
