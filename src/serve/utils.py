@@ -14,7 +14,7 @@ PREDICTION_COUNTER = Counter("predictions_total", "Total predictions by label", 
 class ModelWrapper:
     def __init__(self, model_path, device=None):
         import torch
-        from model.net import SimpleCNN
+        from src.model.net import SimpleCNN
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.model = SimpleCNN()
         state = torch.load(model_path, map_location=self.device)
