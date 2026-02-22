@@ -1,14 +1,13 @@
 version: "3.9"
 
 services:
-
-api:
-  image: ghcr.io/prasadmaharana/cats-dogs:latest
-  container_name: catsdogs-api
-  ports:
-    - "8000:8000"
-  depends_on:
-    - prometheus
+  api:
+    image: ghcr.io/prasadbishnu09/cats-dogs:latest
+    container_name: catsdogs-api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - prometheus
 
   prometheus:
     image: prom/prometheus
